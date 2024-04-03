@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
       textField.font = UIFont.pretendard(size: 14, weight: .semibold)
       textField.layer.cornerRadius = 3
       textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+      textField.addPadding(left: 23)
       return textField
    }()
    
@@ -35,6 +36,7 @@ class LoginViewController: UIViewController {
       textField.font = UIFont.pretendard(size: 14, weight: .semibold)
       textField.layer.cornerRadius = 3
       textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+      textField.addPadding(left: 23)
       return textField
    }()
    
