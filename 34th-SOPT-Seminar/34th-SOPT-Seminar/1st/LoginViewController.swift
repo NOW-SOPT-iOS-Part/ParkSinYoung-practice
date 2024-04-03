@@ -16,22 +16,24 @@ class LoginViewController: UIViewController {
       label.textColor = .black
       label.textAlignment = .center
       label.numberOfLines = 2
-      //       label.font = UIFont(name: "Pretendard-Bold", size: 18)
+      label.font = UIFont.pretendard(size: 18, weight: .bold)
       return label
    }()
    
    private lazy var idTextField: UITextField = {
       let textField = UITextField(frame: CGRect(x: 28, y: 276, width: 335, height: 52))
-      textField.placeholder = "아이디를 입력해주세요"
-      //       textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
+      textField.placeholder = "아이디"
+      textField.font = UIFont.pretendard(size: 14, weight: .semibold)
+      textField.layer.cornerRadius = 3
       textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
       return textField
    }()
    
    private lazy var passwordTextField: UITextField = {
       let textField = UITextField(frame: CGRect(x: 28, y: 335, width: 335, height: 52))
-      textField.placeholder = "비밀번호를 입력해주세요"
-      //       textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
+      textField.placeholder = "비밀번호"
+      textField.font = UIFont.pretendard(size: 14, weight: .semibold)
+      textField.layer.cornerRadius = 3
       textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
       return textField
    }()
@@ -41,8 +43,9 @@ class LoginViewController: UIViewController {
       button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
       button.setTitle("로그인하기", for: .normal)
       button.setTitleColor(.white, for: .normal)
-      //       button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
-             button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+      button.titleLabel?.font = UIFont.pretendard(size: 18, weight: .bold)
+      button.layer.cornerRadius = 6
+      button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
       return button
    }()
    
@@ -59,6 +62,15 @@ class LoginViewController: UIViewController {
       presentToWelcomeVC()
 //      pushToWelcomVC()
    }
+   
+//   func checkFont() {
+//       for family in UIFont.familyNames {
+//           print("🍏",family)
+//           for name in UIFont.fontNames(forFamilyName: family) {
+//               print(name)
+//           }
+//       }
+//   }
    
    private func presentToWelcomeVC() {
       let welcomeViewController = WelcomViewController()

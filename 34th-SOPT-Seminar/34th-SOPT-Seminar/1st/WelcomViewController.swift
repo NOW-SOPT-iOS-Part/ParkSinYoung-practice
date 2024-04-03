@@ -13,10 +13,10 @@ class WelcomViewController: UIViewController {
    var id: String?
    
    private let logoImageView: UIImageView = {
-           let imageView = UIImageView(frame: CGRect(x: 122, y: 87, width: 150, height: 150))
-           imageView.image = UIImage(named: "Logo")
-           return imageView
-       }()
+      let imageView = UIImageView(frame: CGRect(x: 122, y: 87, width: 150, height: 150))
+      imageView.image = UIImage(named: "Logo")
+      return imageView
+   }()
    
    private let titleLabel: UILabel = {
       let uILabel = UILabel(frame: CGRect(x: 150, y: 295, width: 95, height: 60))
@@ -24,6 +24,7 @@ class WelcomViewController: UIViewController {
       uILabel.textColor = .black
       uILabel.textAlignment = .center
       uILabel.numberOfLines = 2
+      uILabel.font = UIFont.pretendard(size: 25, weight: .heavy)
       return uILabel
    }()
    
@@ -32,6 +33,8 @@ class WelcomViewController: UIViewController {
       button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
       button.setTitle("메인으로", for: .normal)
       button.setTitleColor(.white, for: .normal)
+      button.titleLabel?.font = UIFont.pretendard(size: 18, weight: .bold)
+      button.layer.cornerRadius = 6
       return button
    }()
    
@@ -40,6 +43,8 @@ class WelcomViewController: UIViewController {
       button.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
       button.setTitle("다시 로그인", for: .normal)
       button.setTitleColor(.gray, for: .normal)
+      button.titleLabel?.font = UIFont.pretendard(size: 18, weight: .bold)
+      button.layer.cornerRadius = 6
       button.addTarget(self, action: #selector(retryLoginButtonDidTap), for: .touchUpInside)
       return button
    }()
