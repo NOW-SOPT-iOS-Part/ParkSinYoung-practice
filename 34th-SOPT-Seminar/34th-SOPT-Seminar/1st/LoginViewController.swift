@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 
 class LoginViewController: UIViewController {
-   var width = UIScreen().bounds.width
+   
+   var currentMode = "modal"
+   
    private lazy var titleLabel: UILabel = {
       let label = UILabel(frame: CGRect(x: 80, y: 161, width: 236, height: 44))
       label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
@@ -51,28 +53,41 @@ class LoginViewController: UIViewController {
       return button
    }()
    
+   private lazy var segmentedControl: UISegmentedControl = {
+      let segmentedControl = UISegmentedControl(items: ["모달", "네비게이션"])
+      segmentedControl.frame = CGRect(x: 28, y: 600, width: 200, height: 50)
+       segmentedControl.selectedSegmentIndex = 0
+       segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+
+       segmentedControl.setTitleTextAttributes([
+           .foregroundColor: UIColor.black,
+           .font: UIFont.systemFont(ofSize: 16, weight: .bold)
+       ], for: .selected)
+
+       segmentedControl.setTitleTextAttributes([
+           .foregroundColor: UIColor.white,
+           .font: UIFont.systemFont(ofSize: 16),
+       ], for: .normal)
+
+       return segmentedControl
+   }()
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       
       self.view.backgroundColor = .white
-      [titleLabel, idTextField, passwordTextField, loginButton].forEach {
+      [titleLabel, idTextField, passwordTextField, loginButton, segmentedControl].forEach {
          self.view.addSubview($0)
       }
    }
    
    @objc func loginButtonDidTap() {
-      presentToWelcomeVC()
-//      pushToWelcomVC()
+      if currentMode == "modal" {
+         presentToWelcomeVC()
+      } else {
+         pushToWelcomVC()
+      }
    }
-   
-//   func checkFont() {
-//       for family in UIFont.familyNames {
-//           print("🍏",family)
-//           for name in UIFont.fontNames(forFamilyName: family) {
-//               print(name)
-//           }
-//       }
-//   }
    
    private func presentToWelcomeVC() {
       let welcomeViewController = WelcomViewController()
@@ -87,5 +102,11 @@ class LoginViewController: UIViewController {
       self.navigationController?.pushViewController(welcomeViewController, animated: true)
    }
    
-   
+   @objc private func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+      if sender.selectedSegmentIndex == 0 {
+         currentMode = "modal"
+      } else {
+         currentMode = "navigation"
+      }
+   }
 }
