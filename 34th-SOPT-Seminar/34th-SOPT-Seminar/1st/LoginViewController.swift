@@ -15,10 +15,10 @@ class LoginViewController: UIViewController {
    private lazy var titleLabel: UILabel = {
       let label = UILabel(frame: CGRect(x: 80, y: 161, width: 236, height: 44))
       label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
+      label.font = UIFont.pretendard(size: 18, weight: .bold)
       label.textColor = .black
       label.textAlignment = .center
       label.numberOfLines = 2
-      label.font = UIFont.pretendard(size: 18, weight: .bold)
       return label
    }()
    
@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
       textField.font = UIFont.pretendard(size: 14, weight: .semibold)
       textField.layer.cornerRadius = 3
       textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+      textField.clearButtonMode = .always
+      textField.autocapitalizationType = .none
       textField.addPadding(left: 23)
       return textField
    }()
@@ -38,6 +40,9 @@ class LoginViewController: UIViewController {
       textField.font = UIFont.pretendard(size: 14, weight: .semibold)
       textField.layer.cornerRadius = 3
       textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+      textField.isSecureTextEntry = true
+      textField.clearButtonMode = .always
+      textField.autocapitalizationType = .none
       textField.addPadding(left: 23)
       return textField
    }()
@@ -55,18 +60,18 @@ class LoginViewController: UIViewController {
    
    private lazy var segmentedControl: UISegmentedControl = {
       let segmentedControl = UISegmentedControl(items: ["모달", "네비게이션"])
-      segmentedControl.frame = CGRect(x: 28, y: 600, width: 200, height: 50)
+      segmentedControl.frame = CGRect(x: 28, y: 500, width: 200, height: 50)
        segmentedControl.selectedSegmentIndex = 0
        segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
 
        segmentedControl.setTitleTextAttributes([
            .foregroundColor: UIColor.black,
-           .font: UIFont.systemFont(ofSize: 16, weight: .bold)
+           .font: UIFont.pretendard(size: 16, weight: .bold)
        ], for: .selected)
 
        segmentedControl.setTitleTextAttributes([
            .foregroundColor: UIColor.white,
-           .font: UIFont.systemFont(ofSize: 16),
+           .font: UIFont.pretendard(size: 16, weight: .black)
        ], for: .normal)
 
        return segmentedControl
@@ -81,14 +86,6 @@ class LoginViewController: UIViewController {
       }
    }
    
-   @objc func loginButtonDidTap() {
-      if currentMode == "modal" {
-         presentToWelcomeVC()
-      } else {
-         pushToWelcomVC()
-      }
-   }
-   
    private func presentToWelcomeVC() {
       let welcomeViewController = WelcomViewController()
       
@@ -100,6 +97,14 @@ class LoginViewController: UIViewController {
    private func pushToWelcomVC() {
       let welcomeViewController = WelcomViewController()
       self.navigationController?.pushViewController(welcomeViewController, animated: true)
+   }
+   
+   @objc func loginButtonDidTap() {
+      if currentMode == "modal" {
+         presentToWelcomeVC()
+      } else {
+         pushToWelcomVC()
+      }
    }
    
    @objc private func segmentedControlValueChanged(_ sender: UISegmentedControl) {
