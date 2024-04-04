@@ -70,8 +70,8 @@ class WelcomViewController: UIViewController {
    }
    
    private func bindID() {
-//      guard let text = id else {return}
-//      self.titleLabel.text = "\(text)님 \n반가워요!"
+      //      guard let text = id else {return}
+      //      self.titleLabel.text = "\(text)님 \n반가워요!"
       if let text = id {
          self.titleLabel.text = "\(text)님 \n반가워요!"
       } else {

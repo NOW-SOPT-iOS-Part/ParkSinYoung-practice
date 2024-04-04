@@ -61,20 +61,20 @@ class LoginViewController: UIViewController {
    private lazy var segmentedControl: UISegmentedControl = {
       let segmentedControl = UISegmentedControl(items: ["모달", "네비게이션"])
       segmentedControl.frame = CGRect(x: 28, y: 500, width: 200, height: 50)
-       segmentedControl.selectedSegmentIndex = 0
-       segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
-
-       segmentedControl.setTitleTextAttributes([
-           .foregroundColor: UIColor.black,
-           .font: UIFont.pretendard(size: 16, weight: .bold)
-       ], for: .selected)
-
-       segmentedControl.setTitleTextAttributes([
-           .foregroundColor: UIColor.white,
-           .font: UIFont.pretendard(size: 16, weight: .black)
-       ], for: .normal)
-
-       return segmentedControl
+      segmentedControl.selectedSegmentIndex = 0
+      segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+      
+      segmentedControl.setTitleTextAttributes([
+         .foregroundColor: UIColor.black,
+         .font: UIFont.pretendard(size: 16, weight: .bold)
+      ], for: .selected)
+      
+      segmentedControl.setTitleTextAttributes([
+         .foregroundColor: UIColor.white,
+         .font: UIFont.pretendard(size: 16, weight: .black)
+      ], for: .normal)
+      
+      return segmentedControl
    }()
    
    override func viewDidLoad() {
