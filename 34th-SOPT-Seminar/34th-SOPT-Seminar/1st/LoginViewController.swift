@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
       textField.placeholder = "아이디"
       textField.font = UIFont.pretendard(size: 14, weight: .semibold)
       textField.layer.cornerRadius = 3
-      textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+      textField.backgroundColor = UIColor(resource: .gray200)
       textField.clearButtonMode = .always
       textField.autocapitalizationType = .none
       textField.addPadding(left: 23)
@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
       textField.placeholder = "비밀번호"
       textField.font = UIFont.pretendard(size: 14, weight: .semibold)
       textField.layer.cornerRadius = 3
-      textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+      textField.backgroundColor = UIColor(resource: .gray200)
       textField.isSecureTextEntry = true
       textField.clearButtonMode = .always
       textField.autocapitalizationType = .none
@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
    
    private lazy var loginButton: UIButton = {
       let button = UIButton(frame: CGRect(x: 28, y: 422, width: 332, height: 58))
-      button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
+      button.backgroundColor = UIColor(resource: .primaryOrange)
       button.setTitle("로그인하기", for: .normal)
       button.setTitleColor(.white, for: .normal)
       button.titleLabel?.font = UIFont.pretendard(size: 18, weight: .bold)
@@ -79,11 +79,8 @@ class LoginViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      
       self.view.backgroundColor = .white
-      [titleLabel, idTextField, passwordTextField, loginButton, segmentedControl].forEach {
-         self.view.addSubview($0)
-      }
+      setLayout()
    }
    
    private func presentToWelcomeVC() {
@@ -97,6 +94,10 @@ class LoginViewController: UIViewController {
    private func pushToWelcomVC() {
       let welcomeViewController = WelcomViewController()
       self.navigationController?.pushViewController(welcomeViewController, animated: true)
+   }
+   
+   private func setLayout() {
+      view.addSubviews(titleLabel, idTextField, passwordTextField, loginButton, segmentedControl)
    }
    
    @objc func loginButtonDidTap() {
