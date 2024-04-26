@@ -45,7 +45,8 @@ final class ItemCollectionViewCell: UICollectionViewCell {
     
     private lazy var heartButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "heart"), for: .normal)
+       button.tintColor = .red
+       button.setImage(UIImage(systemName: "heart"), for: .normal)
         button.setImage(UIImage(systemName: "heart.fill"), for: .selected)
         button.addTarget(self, action: #selector(heartButtonDidTap), for: .touchUpInside)
         return button
@@ -92,7 +93,8 @@ final class ItemCollectionViewCell: UICollectionViewCell {
         
         heartButton.snp.makeConstraints {
             $0.trailing.bottom.equalTo(itemImageView).inset(8)
-            $0.size.equalTo(16)
+           $0.width.equalTo(16)
+           $0.height.equalTo(16)
         }
     }
     
