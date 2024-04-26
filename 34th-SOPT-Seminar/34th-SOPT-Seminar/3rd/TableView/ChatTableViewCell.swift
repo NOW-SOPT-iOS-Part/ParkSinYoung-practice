@@ -34,7 +34,7 @@ class ChatTableViewCell: UITableViewCell {
    let chatLabel = UILabel().then {
       $0.textColor = .black
       $0.textAlignment = .left
-      $0.font = UIFont(name: "Pretendard-Bold", size: 14)
+      $0.font = UIFont.pretendard(size: 14, weight: .regular)
    }
    
    let itemImageView = UIImageView()
@@ -54,7 +54,7 @@ class ChatTableViewCell: UITableViewCell {
       
       profileImageView.snp.makeConstraints {
          $0.leading.top.bottom.equalToSuperview().inset(16)
-         $0.trailing.equalToSuperview().offset(-318)
+         $0.size.equalTo(40)
 //         $0.width.height.equalTo(40)
       }
       
@@ -75,12 +75,12 @@ class ChatTableViewCell: UITableViewCell {
       
       chatLabel.snp.makeConstraints {
          $0.top.equalTo(nameLabel.snp.bottom).offset(4)
-         $0.leading.equalToSuperview()
+         $0.width.equalTo(219)
       }
       
       itemImageView.snp.makeConstraints {
          $0.trailing.top.bottom.equalToSuperview().inset(16)
-         $0.width.height.equalTo(40)
+         $0.size.equalTo(40)
       }
    }
    

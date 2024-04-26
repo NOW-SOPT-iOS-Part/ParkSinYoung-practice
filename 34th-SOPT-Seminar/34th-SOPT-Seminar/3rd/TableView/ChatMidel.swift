@@ -19,21 +19,18 @@ struct ChatModel {
 extension ChatModel {
    
     static func dummy() -> [ChatModel] {
-       var image = UIImage(systemName: "person")
         return [
-         
-         ChatModel(profileImg: UIImage.logo, name: "류희재", place: "성북구", message: "땡큐", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "윤희슬", place: "여의도", message: "안녕", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "김가현", place: "잠실", message: "아요", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "김선우", place: "회기", message: "너무 좋아요", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "김나연", place: "미국", message: "뿅", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "김민서", place: "중국", message: "뿡", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "김수연", place: "일본", message: "자기야 미안해 했자나", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "한지석", place: "태국", message: "솝트 이딴거 안했어", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "한정원", place: "명왕성", message: "진짜?", itemImg: image ?? UIImage()),
-            ChatModel(profileImg: UIImage.logo, name: "이지훈", place: "안드로메다", message: "난이서~", itemImg: image ?? UIImage()),
-         ChatModel(profileImg: UIImage.logo, name: "박민서", place: "good", message: "난이서~", itemImg: image ?? UIImage()),
-         ChatModel(profileImg: UIImage.logo, name: "박신영", place: "good", message: "난이서~", itemImg: image ?? UIImage())
+         ChatModel(profileImg: UIImage.profile5, name: "요이키", place: "문정동", message: "확인했습니다.", itemImg: UIImage.item2),
+            ChatModel(profileImg: UIImage.profile3, name: "chan", place: "구의동", message: "넵 수고하세용", itemImg: UIImage.item3),
+            ChatModel(profileImg: UIImage.profile4, name: "오지", place: "보문동2가", message: "안녕하세요 답장이 너무 늦었네여 죄송합니다", itemImg: UIImage.item4),
+            ChatModel(profileImg: UIImage.profile5, name: "누룽지", place: "면목동", message: "너무 좋아요", itemImg: UIImage.item5),
+            ChatModel(profileImg: UIImage.profile5, name: "kenny", place: "자양제4동", message: "뿅", itemImg: UIImage.item6),
+            ChatModel(profileImg: UIImage.profile1, name: "자리보금", place: "옥수동", message: "뿡", itemImg: UIImage.item7),
+            ChatModel(profileImg: UIImage.profile6, name: "리빙스턴", place: "면목동", message: "자기야 미안해 했자나", itemImg: UIImage.item8),
+            ChatModel(profileImg: UIImage.profile5, name: "꺄롱이", place: "중곡동", message: "솝트 이딴거 안했어", itemImg: UIImage.item9),
+            ChatModel(profileImg: UIImage.profile5, name: "깨롱이", place: "중곡동", message: "진짜?", itemImg: UIImage.item10),
+            ChatModel(profileImg: UIImage.profile2, name: "요우", place: "군자동", message: "난이서~", itemImg: UIImage.item2),
+         ChatModel(profileImg: UIImage.profile5, name: "박신영", place: "중곡동", message: "난이서~", itemImg: UIImage.item1)
         ]
     }
 }
