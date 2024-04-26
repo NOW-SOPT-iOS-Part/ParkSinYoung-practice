@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1B08D62BD38813007AAB48 /* LoginViewController_SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08D52BD38813007AAB48 /* LoginViewController_SnapKit.swift */; };
+		9E1B08D82BD3885F007AAB48 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08D72BD3885F007AAB48 /* LoginView.swift */; };
+		9E1B08DA2BD38CD6007AAB48 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08D92BD38CD6007AAB48 /* ChatViewController.swift */; };
+		9E1B08DD2BD38E17007AAB48 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08DC2BD38E17007AAB48 /* ChatTableViewCell.swift */; };
+		9E1B08DF2BD39A50007AAB48 /* ChatMidel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08DE2BD39A50007AAB48 /* ChatMidel.swift */; };
+		9E1B08E32BD3A6A3007AAB48 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08E22BD3A6A3007AAB48 /* ItemViewController.swift */; };
+		9E1B08E62BD3A6B8007AAB48 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08E52BD3A6B8007AAB48 /* ItemModel.swift */; };
+		9E1B08E82BD3A6FC007AAB48 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08E72BD3A6FC007AAB48 /* ItemCollectionViewCell.swift */; };
 		9E498E762BB7D7A800AE494B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E498E752BB7D7A800AE494B /* AppDelegate.swift */; };
 		9E498E782BB7D7A800AE494B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E498E772BB7D7A800AE494B /* SceneDelegate.swift */; };
 		9E498E7A2BB7D7A800AE494B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E498E792BB7D7A800AE494B /* ViewController.swift */; };
@@ -60,6 +68,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E1B08D52BD38813007AAB48 /* LoginViewController_SnapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_SnapKit.swift; sourceTree = "<group>"; };
+		9E1B08D72BD3885F007AAB48 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9E1B08D92BD38CD6007AAB48 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		9E1B08DC2BD38E17007AAB48 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		9E1B08DE2BD39A50007AAB48 /* ChatMidel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMidel.swift; sourceTree = "<group>"; };
+		9E1B08E22BD3A6A3007AAB48 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		9E1B08E52BD3A6B8007AAB48 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		9E1B08E72BD3A6FC007AAB48 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		9E498E722BB7D7A800AE494B /* 34th-SOPT-Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-SOPT-Seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E498E752BB7D7A800AE494B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E498E772BB7D7A800AE494B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +140,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E1B08D42BD387C5007AAB48 /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08DB2BD38DA1007AAB48 /* Login */,
+				9E1B08E02BD3A67D007AAB48 /* TableView */,
+				9E1B08E12BD3A68B007AAB48 /* CollectionView */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		9E1B08DB2BD38DA1007AAB48 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08D72BD3885F007AAB48 /* LoginView.swift */,
+				9E1B08D52BD38813007AAB48 /* LoginViewController_SnapKit.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9E1B08E02BD3A67D007AAB48 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08D92BD38CD6007AAB48 /* ChatViewController.swift */,
+				9E1B08DC2BD38E17007AAB48 /* ChatTableViewCell.swift */,
+				9E1B08DE2BD39A50007AAB48 /* ChatMidel.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		9E1B08E12BD3A68B007AAB48 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08E52BD3A6B8007AAB48 /* ItemModel.swift */,
+				9E1B08E72BD3A6FC007AAB48 /* ItemCollectionViewCell.swift */,
+				9E1B08E22BD3A6A3007AAB48 /* ItemViewController.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		9E498E692BB7D7A800AE494B = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +207,7 @@
 				9E498E792BB7D7A800AE494B /* ViewController.swift */,
 				9E498EA52BB7E49000AE494B /* 1st */,
 				9E6090242BC1143F00D018B2 /* 2nd */,
+				9E1B08D42BD387C5007AAB48 /* 3rd */,
 				9E60900E2BBD2E2F00D018B2 /* Font */,
 				9E6090192BBD357B00D018B2 /* Extension */,
 				9E498E7B2BB7D7A900AE494B /* Main.storyboard */,
@@ -414,16 +470,24 @@
 				9E60902C2BC11B3100D018B2 /* WelcomeViewController_Closure.swift in Sources */,
 				9E6090332BC1243C00D018B2 /* WelcomeViewController_SnapKit_Then.swift in Sources */,
 				9E6090312BC1240F00D018B2 /* LoginViewController_SnapKit_Then.swift in Sources */,
+				9E1B08E82BD3A6FC007AAB48 /* ItemCollectionViewCell.swift in Sources */,
+				9E1B08E62BD3A6B8007AAB48 /* ItemModel.swift in Sources */,
 				9E498E7A2BB7D7A800AE494B /* ViewController.swift in Sources */,
+				9E1B08DD2BD38E17007AAB48 /* ChatTableViewCell.swift in Sources */,
 				9E60900F2BBD2E2F00D018B2 /* Font.swift in Sources */,
 				9E6090282BC1146700D018B2 /* WelcomeViewController_DelegatePattern.swift in Sources */,
+				9E1B08D62BD38813007AAB48 /* LoginViewController_SnapKit.swift in Sources */,
+				9E1B08DF2BD39A50007AAB48 /* ChatMidel.swift in Sources */,
 				9E60903C2BC131BF00D018B2 /* ScrollViewController.swift in Sources */,
 				9E60901B2BBD359400D018B2 /* ++UITextField.swift in Sources */,
+				9E1B08D82BD3885F007AAB48 /* LoginView.swift in Sources */,
 				9E6090262BC1145000D018B2 /* LoginViewController_DelegatePattern.swift in Sources */,
+				9E1B08E32BD3A6A3007AAB48 /* ItemViewController.swift in Sources */,
 				9E60902A2BC11AF800D018B2 /* LoginViewController_Closure.swift in Sources */,
 				9E498E762BB7D7A800AE494B /* AppDelegate.swift in Sources */,
 				9E498E782BB7D7A800AE494B /* SceneDelegate.swift in Sources */,
 				9E60901D2BBF845700D018B2 /* ++UIView.swift in Sources */,
+				9E1B08DA2BD38CD6007AAB48 /* ChatViewController.swift in Sources */,
 				9E498EA92BB7E90600AE494B /* WelcomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
