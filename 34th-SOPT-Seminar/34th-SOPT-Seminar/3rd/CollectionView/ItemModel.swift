@@ -20,6 +20,7 @@ struct ItemModel {
 extension ItemModel {
     static func dummy() -> [ItemModel] {
         return [
+//         UIImage()
          ItemModel(itemImg: UIImage.rectangleItem4, name: "아이폰 13프로맥스", price: "1,000,000원", heartIsSelected: false),
             ItemModel(itemImg: UIImage.rectangleItem1, name: "에어팟 프로", price: "300,000원", heartIsSelected: false),
             ItemModel(itemImg: UIImage.rectangleItem5, name: "커피머신", price: "100,000원", heartIsSelected: false),
